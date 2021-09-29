@@ -168,35 +168,6 @@ window.addEventListener('load', function () {
     $('body').css('overflow-y', 'auto')
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
