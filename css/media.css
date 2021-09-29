@@ -1,0 +1,15 @@
+@media screen and (max-width:990px) {
+    .navbar-expand-lg .navbar-collapse {
+        width: 50%;
+        background: white;
+        color: black;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+}
