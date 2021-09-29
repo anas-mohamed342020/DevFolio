@@ -1,3 +1,73 @@
+body {
+  overflow-y: hidden;
+}
+a{
+  text-decoration: none !important;
+}
+.load {
+  z-index: 99999999999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gegga {
+  width: 0;
+}
+.snurra {
+  filter: url(#gegga);
+}
+.stopp1 {
+  stop-color: #1e1e1e;
+}
+.stopp2 {
+  stop-color: #0062d3;
+}
+.halvan {
+  animation: Snurra1 10s infinite linear;
+  stroke-dasharray: 180 800;
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 23;
+  stroke-linecap: round;
+}
+.strecken {
+  animation: Snurra1 3s infinite linear;
+  stroke-dasharray: 26 54;
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 23;
+  stroke-linecap: round;
+}
+.skugga {
+  filter: blur(5px);
+  opacity: 0.3;
+  position: absolute;
+  transform: translate(3px, 3px);
+}
+@keyframes Snurra1 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -403px;
+  }
+}
+
+#btnUp {
+  background-color: #0078ff;
+  color:  white;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 999999999999999999999999;
+    display: none;
+    transition: background-color 0.5s,color 0.5s;
+}
+#btnUp:hover{
+  background-color: #0062d3;
+  color:  black;
+}
 .bgbg {
   background-color: #f5f5f5;
 }
@@ -5,9 +75,9 @@
 .navbar-collapse {
   flex-grow: 0;
 }
-.bg-light {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  color: white !important;
+.navbar {
+  /* background-color: transparent; */
+  color: white;
 }
 .nav-background {
   height: 100%;
@@ -21,22 +91,12 @@ header {
   padding: 20px 0;
   font-weight: 600;
 }
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(255, 255, 255);
-}
+
 .navbar-light .navbar-brand {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   font-size: 28px;
 }
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .show > .nav-link {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 600;
-}
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: rgb(255, 255, 255);
-}
+
 .navbar-expand-lg .navbar-collapse {
   width: 50%;
 }
@@ -45,23 +105,12 @@ header {
   width: 100%;
   justify-content: space-between;
 }
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand {
-  color: rgb(255 255 255);
-  font-size: 28px;
-  font-weight: 600;
-}
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover {
-  color: rgb(255 255 255);
-  font-size: 28px;
-  font-weight: 600;
-}
+
 .navbar-nav li {
   padding: 10px 0px;
 }
 nav {
-  z-index: 999999999999999999999;
+  z-index: 9;
   top: 0px;
 }
 .fix {
@@ -75,17 +124,9 @@ nav {
 .header-info h3 {
   font-size: 40px;
   font-weight: 600;
-  position: relative;
+  display: inline-block;
 }
-.header-info h3::before {
-  content: "";
-  width: 5px;
-  height: 30px;
-  background-color: white;
-  position: absolute;
-  top: 27%;
-  right: 35%;
-}
+
 .fa-chevron-down {
   font-weight: 300;
   font-size: 11px;
@@ -93,16 +134,9 @@ nav {
 .navbar-nav li {
   position: relative;
 }
-.li-home:before {
-  content: "";
-  width: 100%;
-  height: 0.8px;
-  position: absolute;
-  bottom: 9px;
-  right: 0px;
-  background-color: white;
+#nav-home .line {
+  width: 80%;
 }
-
 
 .nav-lis:hover {
   cursor: pointer;
@@ -110,37 +144,103 @@ nav {
 .nav-lis .line {
   height: 0.8px;
   background-color: white;
-  width: 0 ;
+  width: 0;
   transition: width 500ms;
 }
 .nav-lis:hover .line {
-  width: 80%;
+  width: 80% !important;
 }
-
-
-
-
-.dropdown-nav
-{
-  background-color: white;
-  color: #1e1e1e;
-  width: 170%;
+.navbar .dropdown ul {
+  display: block;
   position: absolute;
-  top: 100px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
   opacity: 0;
-  transition: top 500ms, opacity 500ms 200ms;
-  
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+  transition: 0.3s;
 }
-.drop-hover:hover .dropdown-nav
-{
+.ul1{
+  color: #4e4e4e !important;
+  width: 200%;
+  padding: 10px 20px!important;
+}
+.ul2 {
+  width: 140%;
+  text-align: center;
+  position: relative;
+  left: 100%;
+}
+.ul1 a{
+  color: #1e1e1e;
+  transition: color 0.3s;
+}
+.ul1 a:hover{
+  color: #0062d3;
+}
+.navbar .dropdown:hover > ul {
   opacity: 1;
-  top: 40px;
+  top: 100%;
+  visibility: visible;
 }
+
+.auto_text p
+{
+  font-size: 25px;
+}
+
+
+.footer-links{
+  color: #1e1e1e;
+}
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat');
+.auto_text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.auto_text p span.typed-text {
+  font-weight: normal;
+  color: white;
+} */
+.auto_text p span.cursor {
+
+  width: 2px !important; 
+  animation: blink 1s infinite;
+}
+/* .auto_text p span.cursor.typing {
+  animation: none;
+} */
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+
+
+
+
+
+
 /* about */
 .about-container {
   background-color: white;
 }
-.anout-list b {
+.about-list p {
   font-size: 18px;
   font-weight: 600;
 }
@@ -197,12 +297,10 @@ nav {
   bottom: -7px;
   background-color: #0078ff;
 }
-.before-line-header
-{
+.before-line-header {
   position: relative;
 }
-.before-line-header::before
-{
+.before-line-header::before {
   content: "";
   width: 20%;
   position: absolute;
@@ -215,13 +313,11 @@ nav {
   font-weight: 300;
   font-size: 20px;
 }
-.before-line
-{
+.before-line {
   position: relative;
   margin-bottom: 50px;
 }
-.before-line::before
-{
+.before-line::before {
   content: "";
   width: 3%;
   position: absolute;
@@ -307,8 +403,6 @@ nav {
 }
 
 /*  portfolio */
-
-
 
 .card-text {
   font-size: 1.2rem;
@@ -466,4 +560,9 @@ footer {
   color: #fff;
   padding: 25px 0;
   background: #0062d3;
+}
+
+::selection {
+  color: white;
+  background-color: #0062d3;
 }
