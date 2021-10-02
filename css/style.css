@@ -196,32 +196,29 @@ nav {
 .footer-links{
   color: #1e1e1e;
 }
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat');
-.auto_text p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  padding: 0.5rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  overflow: hidden;
+.fa-times{
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
 }
-.auto_text p span.typed-text {
-  font-weight: normal;
-  color: white;
-} */
+
+.nav-fixed-container
+{
+  z-index: 99999999999999999999999999999999;
+  background-color: rgba(78, 78, 78, 0.9);
+  display: none;
+
+}
+.ful2{
+  width: 90%;
+}
+
 .auto_text p span.cursor {
 
   width: 2px !important; 
   animation: blink 1s infinite;
 }
-/* .auto_text p span.cursor.typing {
-  animation: none;
-} */
+
 @keyframes blink {
   0%  { background-color: #ccc; }
   49% { background-color: #ccc; }
