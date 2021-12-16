@@ -13,7 +13,7 @@
   
   <body>
   
-    <div class="load position-fixed top-0 bottom-0 start-0 end-0 bg-info bg">
+    <div class="load position-fixed top-0 bottom-0 start-0 end-0 bg-info bg d-none">
       <svg class="gegga">
         <defs>
           <filter id="gegga">
@@ -44,10 +44,15 @@
       </svg>
   
     </div>
+
+
+    
     <button id="btnUp" class="btn bg-main p-2 rounded-circle text-white">
       <i class="fas fa-arrow-up"></i>
     </button>
-  
+
+    
+
     <nav id="navbar" class="navbar position-fixed w-100 navbar-expand-lg navbar-light ">
       <div class="container">
         <a class="navbar-brand" href="#">DevFolio</a>
@@ -110,7 +115,7 @@
   
   
             <li class="dropdown">
-              <a class="text-decoration-none nav-lis" href="#">
+              <a class="text-decoration-none nav-lis">
                 <span class="text-white drop">
                   Drop Down
                   <i class="fas fa-chevron-down position-relative"></i>
@@ -454,6 +459,12 @@
       </div>
   
     </section>
+
+
+
+
+
+    
     <section class="numbers text-white  ">
       <div class="container-numbers">
   
@@ -501,6 +512,20 @@
       </div>
   
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="portfoli" class=" py-5 bgbg portfolio">
       <div class="header text-center">
         <h1>PROTFOLIO</h1>
@@ -824,6 +849,8 @@
         </div>
       </div>
     </section>
+
+
     <section id="footer" class="footer">
       <div class="footer-container">
         <div class="container  overflow-auto">
@@ -836,7 +863,15 @@
                 <input type="text" class="w-100 form-control" placeholder="your name">
                 <input type="email" class="w-100 form-control" placeholder="your Email">
                 <input type="text" class="w-100 form-control" placeholder="Subject">
-                <textarea name="" class="w-100 form-control" id="" cols="30" rows="5" placeholder="Message"></textarea>
+
+
+
+
+                <textarea maxlength="100" name="" class="w-100 form-control" id="text" cols="30" rows="5" placeholder="Message"></textarea>
+                <p class="alert-danger text-center d-none" id="alert">break the max number</p>
+                <p id="number" class="text-muted h3"></p>
+
+
                 <div class="center d-flex justify-content-center">
                   <button type="submit" class="submit">
                     Send Message
@@ -856,7 +891,7 @@
                 <li><span class="list-icon fa-fw fal fa-phone"></span> (617) 557-0089</li>
                 <li><span class="list-icon fa-fw fal fa-envelope"></span> contact@example.com</li>
               </ul>
-              <a class="icons-footer">
+              <div class="icons-footer">
                 <a  class="footer-links"  href="https://www.facebook.com/profile.php?id=100064859047782" target="_blank"><span class="footer-icons"><i class="fab fa-facebook"></i></span></a>
                 <a  class="footer-links"  href="#" target="_blank"><span class="footer-icons"><i class="fab fa-instagram"></i></span></a>
                 <a  class="footer-links"  href="#" target="_blank"><span class="footer-icons"><i class="fab fa-twitter"></i></span></a>
@@ -868,6 +903,12 @@
         </div>
       </div>
     </section>
+
+
+
+
+
+
     <footer>
       <div class="container">
         <p class="my-1">© Copyright <span class="fw-bold">DevFolio</span>. All Rights Reserved</p>
